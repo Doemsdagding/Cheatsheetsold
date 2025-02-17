@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <title>EXAMPLESHEET</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -8,79 +9,149 @@
 
       rel="stylesheet">
     <style>
-    @page {
-      size: A4;
-      margin: 2cm;
-    }
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+      
+				/* Fonts and format */
+        h2 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            height: 35px;
+            text-align: center;
+            margin: 0px;
+        }
 
-    h2 {
-      font-family: 'IBM Plex Mono', monospace; 
-      font-weight: 700; 
-      height: 35px;
-      text-align: center;
-      margin: 0px;
-    }
+        th, td {
+            padding: 5px;
+            border: 1px solid #ddd;
+            text-align: left;
+            height: 20px;
+            box-sizing: border-box;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 400;
+        }
+      
+				 /* Grid Container */
+        .container {  
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            width: 100%; 
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+        .container > div { 
+            border: 8px solid; 
+            
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 10px;
+          	margin: 5px;
+            box-sizing: border-box; 
+        }
+      
+        /* Containers */
+        .container > .redshiftkeyword1 {
+            border-color: #004080;
+          	width: 350px;
+            height: 430px;
+              
+        }
 
-    th, td {
-      padding: 5px; 
-    	border: 1px solid #ddd;
-    	text-align: left;
-   		height: 20px;
-    	box-sizing: border-box; 
-    	font-family: 'IBM Plex Mono', monospace;
-    	font-weight: 400;
-    }
-
-    .container {
-      width: 380px;
-      height: 450px;
-      border: 8px solid blue;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-    }
-    table {
-      width: 98%;
-      border-collapse: collapse;
-      margin: 0; 
-      box-sizing: border-box; 
-    }
-
-  </style>
+        .container > .viewingredshiftschemas {
+            border-color: #326da8;
+          	width: 530px;
+          	height: 450;
+        }
+      
+      
+				/* Table format */
+        table {
+            width: 98%;
+          	height: 95%;
+            border-collapse: collapse;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
   </head>
   <body>
     <div class="container">
-      <table>
-        <thead>
-          <tr>
-            <td style="height: 45px;" colspan="2">
-              <h2 style="height: 8px;">Redshift keywords 1</h2>
-              <h2 style="width: 277px; margin: 0px;"> </h2>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" rowspan="1">Amazon Redshift is a distributed
-              database that spreads queries and large volumes of data across
-              multiple workers (nodes) and is part of the AWS ecosystem.</td>
-          </tr>
-          <tr>
-            <th style="text-align: center; height: 32px;"><b>Keyword</b></th>
-            <th style="text-align: center; height: 32px;"><b>Description</b></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>columnar database</td>
-            <td>Optimized on individual columns instead of rows.</td>
-          </tr>
-          <tr>
-            <td>PostgreSQL 9 syntax</td>
-            <td>Is the sql language used for redshift.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="redshiftkeyword1" ;="">
+        <table>
+          <thead>
+            <tr>
+              <td style="height: 45px;" colspan="2">
+                <h2 style="height: 8px;">Redshift keywords 1</h2>
+                <h2 style="width: 277px; margin: 0px;"> </h2>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" rowspan="1">Amazon Redshift is a distributed
+                database that spreads queries and large volumes of data across
+                multiple workers (nodes) and is part of the AWS ecosystem.</td>
+            </tr>
+            <tr>
+              <th style="text-align: center; height: 32px;"><b>Keyword</b></th>
+              <th style="text-align: center; height: 32px;"><b>Description</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>columnar database</td>
+              <td>Optimized on individual columns instead of rows.</td>
+            </tr>
+            <tr>
+              <td>PostgreSQL 9 syntax</td>
+              <td>Is the sql language used for redshift.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="viewingredshiftschemas">
+        <table>
+          <thead>
+            <tr>
+              <td style="height: 45px;" colspan="2">
+                <h2 style="height: 8px;">Viewing Redshift schemas</h2>
+                <h2 style="width: 277px; margin: 0px;"> </h2>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" rowspan="1">Amazon Redshift is a distributed
+                database that spreads queries and large volumes of data across
+                multiple workers (nodes) and is part of the AWS ecosystem.</td>
+            </tr>
+            <tr>
+              <td colspan="2" rowspan="1" style="text-align: center;"><b>Example.</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" rowspan="1">SELECT database_name, schema_name,
+                schema_type
+                FROM SVV_REDSHIFT_SCHEMAS
+                <br>
+                <span style="color: #666666;"># database_name| schema_name |
+                  schema_type <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  dev |&nbsp; pg_catalog | local <br>
+                  &nbsp;&nbsp;&nbsp; production | pg_catalog | local</span>
+                <br>
+                SELECT table_name <br>
+                FROM SVV_ALL_TABLES
+                <br>
+                WHERE schma_name = 'spectrumdb'
+                <br>
+                <span style="color: #666666;"># table_name
+                  <br>
+                  ecommerce_sales
+                  <br>
+                  Idaho_site_id </span></td>
+            </tr>
+          </thead>
+        </table>
+      </div>
     </div>
-    
   </body>
 </html>
