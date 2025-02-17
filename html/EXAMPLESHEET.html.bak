@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXAMPLESHEET</title>
+    <style>
+    @page {
+      size: A4;
+      margin: 2cm;
+    }
+
+    /*fonts */
+    @font-face {
+      font-family: 'MonaspaceNeon';
+      src: url('C:/Users/gold-/Downloads/monaspace-v1.101/monaspace-v1.101/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2'), 
+           url('C:/Users/gold-/Downloads/monaspace-v1.101/monaspace-v1.101/fonts/webfonts/MonaspaceNeon-Regular.woff') format('woff');  
+      font-weight: normal; 
+      font-style: normal; 
+    }
+
+    /* Apply the font to the elements you want */
+    h2 {
+      font-family: 'MonaspaceNeon', sans-serif; /* Fallback to sans-serif */
+      height: 35px;
+      text-align: center;
+      margin: 0px;
+    }
+
+    th, td {
+      font-family: 'MonaspaceNeon', sans-serif; /* Apply to table cells too */
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+      height: 20px; /* Or auto, if you don't need a fixed height */
+    }
+
+    /* Other styles... */
+    .container { /* Added a class for the outer div */
+      width: 300px;
+      height: 500px;
+      border: 8px solid blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table {
+      width: 90%;
+      border-collapse: collapse;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <td colspan="2">
+              <h2 style="width: 284px;">Redshift keywords 0</h2>
+            </td>
+          </tr>
+          <tr>
+            <th>Keyword</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>columnar database0</td>
+            <td>Optimized on individual columns instead of rows.</td>
+          </tr>
+          <tr>
+            <td height="121px">PostgreSQL 9 syntax</td>
+            <td height="121px">Is the sql language used for redshift.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </body>
+</html>
