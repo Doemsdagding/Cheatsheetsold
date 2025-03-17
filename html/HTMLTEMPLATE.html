@@ -3,7 +3,6 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>HTMLTEMPLATE</title>
-
     <style>
         @page {
             size: A4;
@@ -36,10 +35,10 @@
         }
         body.light-mode table {
             background-color: white;
-            border: 1px solid white; /* Light mode table border */
+            border: 1px solid white; 
         }
         body.light-mode th, body.light-mode td {
-            border: 1px solid white; /* Light mode inner border */
+            border: 1px solid white; 
         }
         body.dark-mode {
             background-color: #292929;
@@ -47,27 +46,35 @@
         }
         body.dark-mode table {
             background-color: #292929;
-            border: 1px solid #292929; /* Dark mode table border */
+            border: 1px solid #292929; 
         }
         body.dark-mode th, body.dark-mode td {
-            border: 1px solid #292929 /* Dark mode inner border */
+            border: 1px solid #292929 
         }
                 /* Formats */
         h1 {
             font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
             font-weight: 900;
-            height: 65px;
+            height: 45px;
             text-align: center;
             font-size: 36px;
-            margin: 60px;
+            margin: 45px;
         }
 
         h2 {
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
             font-weight: 700;
-            height: 35px;
+            height: 23px;
             text-align: center;
             font-size: 21px;
+            margin: 0px;
+        }
+       h3 {
+            font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
+            font-weight: 700;
+            height: 20px;
+            text-align: center;
+            font-size: 18px;
             margin: 0px;
         }
 
@@ -105,10 +112,10 @@
             border-collapse: collapse; 
         }
         table.inner th, table.inner td {
-            border: 1px solid rgb(0, 0, 0); /* Light mode inner border */
+            border: 1px solid rgb(0, 0, 0); 
         }
         body.dark-mode table.inner {
-            border: 2px solid rgb(255, 255, 255); /* Dark mode table border */
+            border: 2px solid rgb(255, 255, 255); /
         }
 
 
@@ -176,17 +183,12 @@
   <body class="light-mode">
     <!--ICON-->
     <svg style="display: none;">
-        <symbol id="myBase64Image" viewBox="0 0 1 1">
-            <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
-            AAAFCAYAAACNbyblAAAAHElEQVQI12P4
-            //8/w38GIAXDIBKE0DHxgljNBAAO
-            9TXL0Y4OHwAAAABJRU5ErkJggg==" width="1" height="1" />
-        </symbol>
-    </svg>
-    <!--TOGGLE BUTTON-->
-    <button class="toggle-button" onclick="toggleMode()">
-        <span class="icon"></span>
-    </button>
+      <symbol id="myBase64Image" viewBox="0 0 1 1">
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA%0A%20%20%20%20%20%20%20%20%20%20%20%20AAAFCAYAAACNbyblAAAAHElEQVQI12P4%0A%20%20%20%20%20%20%20%20%20%20%20%20//8/w38GIAXDIBKE0DHxgljNBAAO%0A%20%20%20%20%20%20%20%20%20%20%20%209TXL0Y4OHwAAAABJRU5ErkJggg=="
+
+          width="1" height="1"></image> </symbol> </svg>
+    <!--TOGGLE BUTTON--> <button class="toggle-button" onclick="toggleMode()">
+      <span class="icon"></span> </button>
     <script>
         function toggleMode() {
             const body = document.body;
@@ -195,11 +197,11 @@
         }
     </script>
     <!--HEADER h1-->
-    <h1>Robins Template chapter 1 <svg width="80" height="80">
-        <use href="#myBase64Image"></use>
-    </svg>  </h1>
+    <h1>Robins Template chapter 1
+      <svg width="80" height="80">
+        <use href="#myBase64Image"></use> </svg> </h1>
     <!-- page 1 -->
-    <table height="1216" width="860">
+    <table style="width: 890px; height: 1252px;">
       <tbody>
         <tr>
           <td style="width: 289.6px;">
@@ -214,10 +216,14 @@
                         <tbody>
                           <tr>
                             <td>
-                              <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                <span>Robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                    <use href="#myBase64Image"></use>
-                                </svg> </div>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
                             </td>
                           </tr>
                         </tbody>
@@ -233,11 +239,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -252,11 +262,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -278,11 +292,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                             <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -297,11 +315,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -316,11 +338,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -334,7 +360,7 @@
       </tbody>
     </table>
     <!-- page 2 -->
-    <table height="1216" width="860">
+    <table style="width: 890px; height: 1252px;">
       <tbody>
         <tr>
           <td style="width: 860px;">
@@ -349,11 +375,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -368,11 +398,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -387,11 +421,15 @@
                         <tbody>
                           <tr>
                             <td>
-                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
-                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                      <use href="#myBase64Image"></use>
-                                  </svg> </div>
-                              </td>
+                              <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+                                <div style="text-align: center;">
+                                  <h2>Robin</h2>
+                                </div>
+                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                  <svg width="50" height="50">
+                                    <use href="#myBase64Image"></use> </svg> </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
