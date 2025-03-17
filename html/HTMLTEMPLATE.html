@@ -29,6 +29,29 @@
             font-weight: normal;
             font-style: italic;
         }
+                /* dark mode */
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+        body.light-mode table {
+            background-color: white;
+            border: 1px solid white; /* Light mode table border */
+        }
+        body.light-mode th, body.light-mode td {
+            border: 1px solid white; /* Light mode inner border */
+        }
+        body.dark-mode {
+            background-color: #292929;
+            color: white;
+        }
+        body.dark-mode table {
+            background-color: #292929;
+            border: 1px solid #292929; /* Dark mode table border */
+        }
+        body.dark-mode th, body.dark-mode td {
+            border: 1px solid #292929 /* Dark mode inner border */
+        }
                 /* Formats */
         h1 {
             font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
@@ -81,6 +104,13 @@
             border: 2px solid #000000; 
             border-collapse: collapse; 
         }
+        table.inner th, table.inner td {
+            border: 1px solid rgb(0, 0, 0); /* Light mode inner border */
+        }
+        body.dark-mode table.inner {
+            border: 2px solid rgb(255, 255, 255); /* Dark mode table border */
+        }
+
 
         .container1 {
             border: 8px solid #004080;
@@ -106,10 +136,44 @@
             padding: 5px;
           	
         }
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .toggle-button:active {
+            background-color: #004494;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .toggle-button .icon {
+            font-size: 20px;
+        }
+        body.light-mode .toggle-button .icon::before {
+            content: '🌙'; /* Moon icon for light mode */
+        }
+        body.dark-mode .toggle-button .icon::before {
+            content: '☀️'; /* Sun icon for dark mode */
+        }
       
     </style>
   </head>
-  <body>
+  <body class="light-mode">
     <!--ICON-->
     <svg style="display: none;">
         <symbol id="myBase64Image" viewBox="0 0 1 1">
@@ -119,6 +183,17 @@
             9TXL0Y4OHwAAAABJRU5ErkJggg==" width="1" height="1" />
         </symbol>
     </svg>
+    <!--TOGGLE BUTTON-->
+    <button class="toggle-button" onclick="toggleMode()">
+        <span class="icon"></span>
+    </button>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
     <!--HEADER h1-->
     <h1>Robins Template chapter 1 <svg width="80" height="80">
         <use href="#myBase64Image"></use>
