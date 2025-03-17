@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>HTMLTEMPLATE</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+      
+				/* Fonts */
+        @font-face {
+            font-family: 'MonaspaceNeon';
+            src: url('fonts/MonaspaceNeon-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'MonaspaceNeon';
+            src: url('fonts/MonaspaceNeon-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'MonaspaceNeon';
+            src: url('fonts/MonaspaceNeon-Italic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: italic;
+        }
+                /* Formats */
+        h1 {
+            font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
+            font-weight: 900;
+            height: 65px;
+            text-align: center;
+            font-size: 36px;
+            margin: 60px;
+        }
+
+        h2 {
+            font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
+            font-weight: 700;
+            height: 35px;
+            text-align: center;
+            font-size: 21px;
+            margin: 0px;
+        }
+
+         th, td {
+            padding: 5px;
+            border:  1px solid white;
+            text-align: left;
+            height: 20px;
+            box-sizing: border-box;
+            font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
+            font-size: 18px;
+            font-weight: 400;
+        }
+        table {
+          border: 0px solid white;
+          outline: none;
+          background-color: white;
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+        table, th, td {
+            vertical-align: top;
+        }
+
+      	body {
+  				 display: flex;
+          flex-direction: column;
+  				justify-content: center; 
+  				align-items: center; 
+ 					margin: 10; 
+				}
+      	table.inner {
+            width: 100%;
+            border: 2px solid #000000; 
+            border-collapse: collapse; 
+        }
+
+        .container1 {
+            border: 8px solid #004080;
+          	border-radius: 10px;
+            padding: 5px;
+          	
+        }
+      	.container2 {
+            border: 8px solid #383e4f; 
+          	border-radius: 10px;
+            padding: 5px;
+          	
+        }
+      	.container3 {
+            border: 8px solid #5474cc;
+          	border-radius: 10px;
+            padding: 5px;
+          	
+        }
+      	.container4 {
+            border: 8px solid #a0b3e8; 
+          	border-radius: 10px;
+            padding: 5px;
+          	
+        }
+      
+    </style>
+  </head>
+  <body>
+    <!--ICON-->
+    <svg style="display: none;">
+        <symbol id="myBase64Image" viewBox="0 0 1 1">
+            <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+            AAAFCAYAAACNbyblAAAAHElEQVQI12P4
+            //8/w38GIAXDIBKE0DHxgljNBAAO
+            9TXL0Y4OHwAAAABJRU5ErkJggg==" width="1" height="1" />
+        </symbol>
+    </svg>
+    <!--HEADER h1-->
+    <h1>Robins Template chapter 1 <svg width="80" height="80">
+        <use href="#myBase64Image"></use>
+    </svg>  </h1>
+    <!-- page 1 -->
+    <table height="1216" width="860">
+      <tbody>
+        <tr>
+          <td style="width: 289.6px;">
+            <!-- left side -->
+            <table height="1216" width="278">
+              <tbody>
+                <tr>
+                  <th>
+                    <!--cell a1 -->
+                    <div class="container1">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                <span>Robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                    <use href="#myBase64Image"></use>
+                                </svg> </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell a2 -->
+                    <div class="container2">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell a3 -->
+                    <div class="container1">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td style="width: 562.8px;">
+            <!-- right side -->
+            <table none="" height="1216" width="562">
+              <tbody>
+                <tr>
+                  <th>
+                    <!--cell b1 -->
+                    <div class="container3">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell b2 -->
+                    <div class="container4">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell b3 -->
+                    <div class="container3">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- page 2 -->
+    <table height="1216" width="860">
+      <tbody>
+        <tr>
+          <td style="width: 860px;">
+            <!-- single row -->
+            <table height="1216" width="860">
+              <tbody>
+                <tr>
+                  <th>
+                    <!--cell a1 -->
+                    <div class="container1">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell a2 -->
+                    <div class="container2">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <!--cell a3 -->
+                    <div class="container1">
+                      <table class="inner">
+                        <tbody>
+                          <tr>
+                            <td>
+                                <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                                  <span>robin</span> <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                      <use href="#myBase64Image"></use>
+                                  </svg> </div>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
