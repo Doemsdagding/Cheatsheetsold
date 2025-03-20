@@ -6,10 +6,10 @@
     <style>
         @page {
             size: A4;
-            margin: 2cm;
+            margin: 3mm;
         }
       
-				/* Fonts */
+		/* Fonts */
         @font-face {
             font-family: 'MonaspaceNeon';
             src: url('fonts/MonaspaceNeon-Regular.woff2') format('woff2');
@@ -35,10 +35,10 @@
         }
         body.light-mode table {
             background-color: white;
-            border: 1px solid white; 
+            border: 2px solid white; 
         }
         body.light-mode th, body.light-mode td {
-            border: 1px solid white; 
+            border: 2px solid white; 
         }
         body.dark-mode {
             background-color: #292929;
@@ -46,35 +46,42 @@
         }
         body.dark-mode table {
             background-color: #292929;
-            border: 1px solid #292929; 
+            border: 2px solid #292929; 
         }
         body.dark-mode th, body.dark-mode td {
-            border: 1px solid #292929 
+            border: 2px solid #292929 
+        }
+        body.dark-mode table.inner {
+            border: 2px solid white; 
+        }
+        body.dark-mode table.inner th, 
+        body.dark-mode table.inner td {
+            border: 2px solid white; 
         }
                 /* Formats */
         h1 {
             font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
             font-weight: 900;
-            height: 45px;
+            height: 31px;
             text-align: center;
-            font-size: 36px;
-            margin: 45px;
+            font-size: 25px;
+            margin: 31px;
         }
 
         h2 {
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
             font-weight: 700;
-            height: 23px;
+            height: 16px;
             text-align: center;
-            font-size: 21px;
+            font-size: 14px;
             margin: 0px;
         }
-       h3 {
+      	h3 {
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
             font-weight: 700;
-            height: 20px;
+            height: 14px;
             text-align: center;
-            font-size: 18px;
+            font-size: 12px;
             margin: 0px;
         }
 
@@ -82,10 +89,10 @@
             padding: 5px;
             border:  1px solid white;
             text-align: left;
-            height: 20px;
+            height: 14px;
             box-sizing: border-box;
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 400;
         }
         table {
@@ -104,43 +111,47 @@
           flex-direction: column;
   				justify-content: center; 
   				align-items: center; 
- 					margin: 10; 
+ 					margin: 7; 
 				}
       	table.inner {
             width: 100%;
-            border: 2px solid #000000; 
+            border: 2px solid black; 
             border-collapse: collapse; 
         }
         table.inner th, table.inner td {
-            border: 1px solid rgb(0, 0, 0); 
+            border: 2px solid black;
         }
         body.dark-mode table.inner {
-            border: 2px solid rgb(255, 255, 255); /
+            border: 2px solid white; 
+        }
+        body.dark-mode table.inner th, 
+        body.dark-mode table.inner td {
+            border: 2px solid white; 
         }
 
 
         .container1 {
-            border: 8px solid #004080;
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #004080;
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container2 {
-            border: 8px solid #383e4f; 
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #383e4f; 
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container3 {
-            border: 8px solid #5474cc;
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #5474cc;
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container4 {
-            border: 8px solid #a0b3e8; 
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #a0b3e8; 
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
         .toggle-button {
@@ -172,12 +183,19 @@
             font-size: 20px;
         }
         body.light-mode .toggle-button .icon::before {
-            content: '🌙'; /* Moon icon for light mode */
+            content: '🌙';
         }
         body.dark-mode .toggle-button .icon::before {
-            content: '☀️'; /* Sun icon for dark mode */
+            content: '☀️';
         }
-      
+        .page-break {
+            page-break-before: always;
+        }
+        @media print {
+            .toggle-button {
+                display: none;
+            }
+        }
     </style>
   </head>
   <body class="light-mode">
@@ -198,15 +216,15 @@
     </script>
     <!--HEADER h1-->
     <h1>Robins Template chapter 1
-      <svg width="80" height="80">
+        <svg width="55" height="55">
         <use href="#myBase64Image"></use> </svg> </h1>
     <!-- page 1 -->
-    <table style="width: 890px; height: 1252px;">
+    <table style="width: 765px; height:  998px;">
       <tbody>
         <tr>
-          <td style="width: 289.6px;">
+            <td style="width: 199px; padding-right: 0px;">
             <!-- left side -->
-            <table height="1216" width="278">
+            <table style="width: 248px; height: 839px;">
               <tbody>
                 <tr>
                   <th>
@@ -220,8 +238,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -243,8 +261,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -266,8 +284,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -280,15 +298,15 @@
               </tbody>
             </table>
           </td>
-          <td style="width: 562.8px;">
+          <td style="width: 367px; padding-left: 0px;">
             <!-- right side -->
-            <table none="" height="1216" width="562">
+            <table none="" style="width: 352px; height: 839px;">
               <tbody>
                 <tr>
                   <th>
                     <!--cell b1 -->
                     <div class="container3">
-                      <table class="inner">
+                        <table class="inner" style="width: 483px; ;">
                         <tbody>
                           <tr>
                             <td>
@@ -296,8 +314,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -319,8 +337,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -342,8 +360,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -360,12 +378,12 @@
       </tbody>
     </table>
     <!-- page 2 -->
-    <table style="width: 890px; height: 1252px;">
+    <table style="width: 765px; height: 998px;" class="page-break">
       <tbody>
         <tr>
-          <td style="width: 860px;">
+            <td style="width: 765px;">
             <!-- single row -->
-            <table height="1216" width="860">
+            <table height="839" width="765">
               <tbody>
                 <tr>
                   <th>
@@ -379,8 +397,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -402,8 +420,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -425,8 +443,8 @@
                                 <div style="text-align: center;">
                                   <h2>Robin</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                    <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>

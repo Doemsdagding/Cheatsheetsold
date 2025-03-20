@@ -6,10 +6,11 @@
     <style>
         @page {
             size: A4;
-            margin: 2cm;
+            margin: 3mm;
         }
-      
-				/* Fonts */
+
+
+        /* Fonts */
         @font-face {
             font-family: 'MonaspaceNeon';
             src: url('fonts/MonaspaceNeon-Regular.woff2') format('woff2');
@@ -35,10 +36,10 @@
         }
         body.light-mode table {
             background-color: white;
-            border: 1px solid white; /* Light mode table border */
+            border: 2px solid white; 
         }
         body.light-mode th, body.light-mode td {
-            border: 1px solid white; /* Light mode inner border */
+            border: 2px solid white; 
         }
         body.dark-mode {
             background-color: #292929;
@@ -46,35 +47,42 @@
         }
         body.dark-mode table {
             background-color: #292929;
-            border: 1px solid #292929; /* Dark mode table border */
+            border: 2px solid #292929; 
         }
         body.dark-mode th, body.dark-mode td {
-            border: 1px solid #292929 /* Dark mode inner border */
+            border: 2px solid #292929 
+        }
+        body.dark-mode table.inner {
+            border: 2px solid white; 
+        }
+        body.dark-mode table.inner th, 
+        body.dark-mode table.inner td {
+            border: 2px solid white; 
         }
                 /* Formats */
         h1 {
             font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
             font-weight: 900;
-            height: 45px;
+            height: 31px;
             text-align: center;
-            font-size: 36px;
-            margin: 45px;
+            font-size: 25px;
+            margin: 31px;
         }
 
         h2 {
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
             font-weight: 700;
-            height: 23px;
+            height: 16px;
             text-align: center;
-            font-size: 21px;
+            font-size: 14px;
             margin: 0px;
         }
       	h3 {
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
             font-weight: 700;
-            height: 20px;
+            height: 14px;
             text-align: center;
-            font-size: 18px;
+            font-size: 12px;
             margin: 0px;
         }
 
@@ -82,10 +90,10 @@
             padding: 5px;
             border:  1px solid white;
             text-align: left;
-            height: 20px;
+            height: 14px;
             box-sizing: border-box;
             font-family: 'MonaspaceNeon', 'Arial', 'sans-serif';
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 400;
         }
         table {
@@ -104,47 +112,52 @@
           flex-direction: column;
   				justify-content: center; 
   				align-items: center; 
- 					margin: 10; 
+ 					margin: 7; 
 				}
       	table.inner {
             width: 100%;
-            border: 2px solid #000000; 
+            border: 2px solid black; 
             border-collapse: collapse; 
+            cursor: pointer; 
         }
         table.inner th, table.inner td {
-            border: 1px solid rgb(0, 0, 0); /* Light mode inner border */
+            border: 2px solid black;
         }
         body.dark-mode table.inner {
-            border: 2px solid rgb(255, 255, 255); /* Dark mode table border */
+            border: 2px solid white; 
+        }
+        body.dark-mode table.inner th, 
+        body.dark-mode table.inner td {
+            border: 2px solid white; 
         }
 
 
         .container1 {
-            border: 8px solid #004080;
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #004080;
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container2 {
-            border: 8px solid #383e4f; 
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #383e4f; 
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container3 {
-            border: 8px solid #5474cc;
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #5474cc;
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
       	.container4 {
-            border: 8px solid #a0b3e8; 
-          	border-radius: 10px;
-            padding: 5px;
+            border: 6px solid #a0b3e8; 
+          	border-radius: 7px;
+            padding: 3px;
           	
         }
         .toggle-button {
-            position: absolute;
+            position: fixed; 
             top: 10px;
             right: 10px;
             width: 40px;
@@ -172,12 +185,105 @@
             font-size: 20px;
         }
         body.light-mode .toggle-button .icon::before {
-            content: '🌙'; /* Moon icon for light mode */
+            content: '🌙';
         }
         body.dark-mode .toggle-button .icon::before {
-            content: '☀️'; /* Sun icon for dark mode */
+            content: '☀️';
         }
-      
+        .page-break {
+            page-break-before: always;
+        }
+
+        @media print {
+            .toggle-button {
+                display: none;
+            }
+        }
+        .print-button {
+            position: fixed;
+            top: 60px; 
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .print-button:hover {
+            background-color: #218838;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .print-button:active {
+            background-color: #1e7e34;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .print-button .icon {
+            font-size: 20px;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1000; 
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative; 
+            line-height: 1.5; 
+        }
+        .modal-content h1, .modal-content h2, .modal-content h3, .modal-content th, .modal-content td {
+            font-size: 1.2em; 
+            word-wrap: break-word; 
+            white-space: normal; 
+            padding: 10px; 
+        }
+        .modal-close {
+            position: sticky; 
+            top: -15px; 
+            right: -15px; 
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+            z-index: 10; 
+        }
+        .modal-content table {
+            table-layout: auto; 
+            width: 100%; 
+        }
+
     </style>
   </head>
   <body class="light-mode">
@@ -194,24 +300,56 @@
           width="1" height="1"></image> </symbol> </svg>
     <!--TOGGLE BUTTON--> <button class="toggle-button" onclick="toggleMode()">
       <span class="icon"></span> </button>
+    <button class="print-button" onclick="window.print()">
+      <span class="icon">🖨️</span> </button>
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-table-container"></div>
+        </div>
+    </div>
     <script>
+        //darkmode
         function toggleMode() {
             const body = document.body;
             body.classList.toggle('light-mode');
             body.classList.toggle('dark-mode');
         }
+        //modal
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.querySelectorAll('table.inner').forEach(table => {
+                table.addEventListener('click', (event) => {
+                    event.stopPropagation(); 
+                    openModal(table.outerHTML); 
+                });
+            });
+        });
+
+        function openModal(tableHtml) {
+            const modal = document.getElementById('modal');
+            const modalTableContainer = document.getElementById('modal-table-container');
+            modalTableContainer.innerHTML = tableHtml; 
+            modal.style.display = 'flex'; 
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none'; 
+        }
     </script>
     <!--HEADER h1-->
     <h1>REDSHIFT – INTRODUCTION
-      <svg width="80" height="80">
+      <svg width="55" height="55">
         <use href="#redshiftlgo"></use> </svg> </h1>
     <!-- page 1 -->
-    <table style="width: 890px; height: 1252px;">
+    <table style="width: 765px; height:  998px;">
       <tbody>
         <tr>
-          <td style="width: 289.6px;">
+          <td style="width: 199px; padding-right: 0px;">
             <!-- left side -->
-            <table style="width: 352px; height: 1216px;">
+            <table style="width: 248px; height: 839px;">
               <tbody>
                 <tr>
                   <th>
@@ -273,8 +411,8 @@
                                 <div style="text-align: center;">
                                   <h2>Viewing data types</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                  <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -300,7 +438,7 @@
                               FROM <br>
                               <i>SVV_ALL_COLUMNS <br>
                               </i>where <br>
-                              schema_name = <br> 'spectrumdb' <br>AND <br>
+                              schema_name = 'spectrumdb' <br>AND <br>
                               table_name = 'ecommerce_sales'; </td>
                           </tr>
                         </tbody>
@@ -320,8 +458,8 @@
                                 <div style="text-align: center;">
                                   <h2>Cast()</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                  <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -337,7 +475,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td>SELECT <br>
+                            <td>SELECT 
                               cast(2.00 as INTEGER) as our_int
                             </td>
                           </tr>
@@ -349,15 +487,15 @@
               </tbody>
             </table>
           </td>
-          <td style="width: 562.8px;">
+          <td style="width: 367px; padding-left: 0px;">
             <!-- right side -->
-            <table none="" style="width: 532px; height: 1216px;">
+            <table none="" style="width: 352px; height: 839px;">
               <tbody>
                 <tr>
                   <th>
                     <!--cell b1 -->
                     <div class="container3">
-                      <table class="inner" style="width: 493px; height: 520px;">
+                      <table class="inner" style="width: 483px; ;">
                         <tbody>
                           <tr>
                             <td style="text-align: center;">
@@ -365,8 +503,8 @@
                                 <div style="text-align: center;">
                                   <h2>Viewing Redshift schemas</h2>
                                 </div>
-                                <div style="position: absolute; right: -40px; top: -40px; z-index: 1;">
-                                  <svg width="50" height="50">
+                                <div style="position: absolute; right: -28px; top: -28px; z-index: 1;">
+                                  <svg width="34" height="34">
                                     <use href="#myBase64Image"></use> </svg> </div>
                               </div>
                             </td>
@@ -374,7 +512,7 @@
                           <tr>
                             <td>To see all databases and the schemas they use
                               the table SVV_REDSHIFT_SCHEMAS is used to see the
-                              information from internal tables. SVV_ALL_SCHEMAS
+                              information from internal tables. <br>SVV_ALL_SCHEMAS
                               is used to see the information from internal and
                               external tables.</td>
                           </tr>
@@ -385,15 +523,15 @@
                           </tr>
                           <tr>
                             <td>SELECT database_name, schema_name, schema_type <br>
-                              FROM <i>SVV_REDSHIFT_SCHEMAS</i><br>
+                              FROM<br> <i>SVV_REDSHIFT_SCHEMAS</i><br><br>
                               <span style="color: #666666;"># database_name|
                                 schema_name | schema_type <br>
                                 dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 | pg_catalog&nbsp; | local <br>
                                 production &nbsp; &nbsp; | pg_catalog&nbsp; |
-                                local </span><br>
-                              SELECT table_name <i>FROM SVV_ALL_TABLES</i>
-                              WHERE schma_name = 'spectrumdb' <br>
+                                local </span><br><br>
+                              SELECT table_name <i><br>FROM <br>SVV_ALL_TABLES</i>
+                              <br>WHERE <br>schma_name = 'spectrumdb' <br><br>
                               <span style="color: #666666;"># table_name <br>
                                 ecommerce_sales<br>
                                 Idaho_site_id</span></td>
@@ -440,7 +578,7 @@
                           <tr>
                             <td>Datetime<br>
                             </td>
-                            <td>Your average datetime data types. With timestamp
+                            <td>Your average datetime data types.<br> With timestamp
                               being used for combined date and time.<br>
                             </td>
                             <td>date, time, timetz, timestamp, timestamptz<br>
@@ -449,7 +587,7 @@
                           <tr>
                             <td>Character<br>
                             </td>
-                            <td>Your average string data types<br>
+                            <td>Your average string data types.<br>
                             </td>
                             <td>char, varchar<br>
                             </td>
@@ -485,7 +623,7 @@
                           </tr>
                           <tr>
                             <td>
-                              <h3>SQL type</h3>
+                              <h3>SQLtype</h3>
                             </td>
                             <td colspan="2">
                               <h3> Replacement </h3>
@@ -535,12 +673,12 @@
       </tbody>
     </table>
     <!-- page 2 -->
-    <table style="width: 890px; height: 1252px;">
+    <table style="width: 765px; height: 998px;" class="page-break">
       <tbody>
         <tr>
-          <td style="width: 860px;">
+          <td style="width: 765px;">
             <!-- single row -->
-            <table height="1216" width="860">
+            <table height="839" width="765">
               <tbody>
                 <tr>
                   <th>
@@ -552,7 +690,7 @@
                             <td>
                               <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
                                 <span>robin</span>
-                                <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                <svg width="34" height="34" style="position: absolute; right: -28px; top: -28px; z-index: 1;">
                                   <use href="#myBase64Image"></use> </svg> </div>
                             </td>
                           </tr>
@@ -571,7 +709,7 @@
                             <td>
                               <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
                                 <span>robin</span>
-                                <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                <svg width="34" height="34" style="position: absolute; right: -28px; top: -28px; z-index: 1;">
                                   <use href="#myBase64Image"></use> </svg> </div>
                             </td>
                           </tr>
@@ -590,7 +728,7 @@
                             <td>
                               <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
                                 <span>robin</span>
-                                <svg width="50" height="50" style="position: absolute; right: -40px; top: -40px; z-index: 1;">
+                                <svg width="34" height="34" style="position: absolute; right: -28px; top: -28px; z-index: 1;">
                                   <use href="#myBase64Image"></use> </svg> </div>
                             </td>
                           </tr>
