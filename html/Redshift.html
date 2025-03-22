@@ -59,6 +59,7 @@
         body.dark-mode table.inner td {
             border: 2px solid white; 
         }
+        
                 /* Formats */
         h1 {
             font-family: 'MonaspaceNeon', 'Algerian', 'sans-serif';
@@ -194,11 +195,6 @@
             page-break-before: always;
         }
 
-        @media print {
-            .toggle-button {
-                display: none;
-            }
-        }
         .print-button {
             position: fixed;
             top: 60px; 
@@ -231,6 +227,13 @@
             .print-button {
                 display: none;
             }
+            .toggle-button {
+                display: none;
+            }
+            .page-break {
+                height: 20mm;
+            }
+            
         }
         .modal {
             display: none; 
@@ -254,6 +257,13 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             position: relative; 
             line-height: 1.5; 
+        }
+        body.light-mode .modal-content {
+            background-color: white;
+        }
+
+        body.dark-mode .modal-content {
+            background-color: #292929;
         }
         .modal-content h1, .modal-content h2, .modal-content h3, .modal-content th, .modal-content td {
             font-size: 1.2em; 
@@ -673,7 +683,8 @@
       </tbody>
     </table>
     <!-- page 2 -->
-    <table style="width: 765px; height: 998px;" class="page-break">
+    <div class="page-break"></div>
+    <table style="width: 765px; height: 998px;">
       <tbody>
         <tr>
           <td style="width: 765px;">
